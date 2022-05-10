@@ -1,20 +1,27 @@
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
-  </head>
-  <body>
-    <h1>Titel</h1>
+</head>
+<body>
+<h1>Titel</h1>
 
-    <div class="container"></div>
+<div class="container"></div>
 
-    <script>
-      /* Aufgabe:
-        Füge per Javascript ein Bild mit der folgenden URL in das Div mit
-        der Klasse container ein: https://media.giphy.com/media/fDzM81OYrNjJC/giphy.gif
+<script>
+    /* Aufgabe:
+      Füge per Javascript ein Bild mit der folgenden URL in das Div mit
+      der Klasse container ein: https://media.giphy.com/media/fDzM81OYrNjJC/giphy.gif
 
-        Tipps: Du musst ein IMG element erstellen, und dessen Attribut src setzten, und es in den DOM einfügen.
-       */
+      Tipps: Du musst ein IMG element erstellen, und dessen Attribut src setzten, und es in den DOM einfügen.
+     */
 
-    </script>
-  </body>
+    let img = document.createElement('img');
+
+    img.src = 'https://media.giphy.com/media/fDzM81OYrNjJC/giphy.gif';
+
+    let container = document.querySelector('.container');
+    container.appendChild(img);
+
+</script>
+</body>
 </html>

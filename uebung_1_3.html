@@ -1,40 +1,49 @@
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
-  </head>
-  <body>
+</head>
+<body>
 
-    <ul id="liste">
+<ul id="liste">
 
-    </ul>
+</ul>
 
-    <script>
-      /* Aufgabe:
-       * Erstelle per Javascript für jedes Mitglied der Simpsons einen
-       * Eintrag in der Liste #liste mit ihrem Vor-, Nachnamen und Alter.
+<script>
+    /* Aufgabe:
+     * Erstelle per Javascript für jedes Mitglied der Simpsons einen
+     * Eintrag in der Liste #liste mit ihrem Vor-, Nachnamen und Alter.
 
-       Erwartetes Resultat:
-       <ul id="liste">
-          <li>Bart Simpson (10)</li>
-          <li>Homer Simpson (36)</li>
-          <li>Lisa Simpson (8)</li>
-          <li>Marge Simpson (34)</li>
-          <li>Maggie Simpson (1)</li>
-          <li>Hugo Simpson (10)</li>
-       </ul>
-      */
+     Erwartetes Resultat:
+     <ul id="liste">
+        <li>Bart Simpson (10)</li>
+        <li>Homer Simpson (36)</li>
+        <li>Lisa Simpson (8)</li>
+        <li>Marge Simpson (34)</li>
+        <li>Maggie Simpson (1)</li>
+        <li>Hugo Simpson (10)</li>
+     </ul>
+    */
 
-       var simpsons = [
-         {firstname: "Bart", name: "Simpson", age: 10, sex: 'm'},
-         {firstname: "Homer", name: "Simpson", age: 36, sex: 'm'},
-         {firstname: "Lisa", name: "Simpson", age: 8, sex: 'w'},
-         {firstname: "Marge",name: "Simpson",  age: 34, sex: 'w'},
-         {firstname: "Maggie", name: "Simpson", age: 1, sex: 'w'},
-         {firstname: "Hugo", name: "Simpson", age: 10, sex: 'm'}
-       ];
+    var simpsons = [
+        {firstname: "Bart", name: "Simpson", age: 10, sex: 'm'},
+        {firstname: "Homer", name: "Simpson", age: 36, sex: 'm'},
+        {firstname: "Lisa", name: "Simpson", age: 8, sex: 'w'},
+        {firstname: "Marge", name: "Simpson", age: 34, sex: 'w'},
+        {firstname: "Maggie", name: "Simpson", age: 1, sex: 'w'},
+        {firstname: "Hugo", name: "Simpson", age: 10, sex: 'm'},
+    ];
 
-    </script>
-  </body>
+    let list = document.querySelector('#liste');
+
+    for (let simpson of simpsons) {
+        let listItem = document.createElement('li');
+        listItem.innerHTML = `${simpson.firstname} ${simpson.name} (${simpson.age})`;
+
+        list.appendChild(listItem);
+    }
+
+</script>
+</body>
 </html>
 
 
